@@ -1,0 +1,9 @@
+TO DO
+Add admin page to git
+Add server code to git
+Get page working
+Check all links
+Check all downloads
+Check all uploads
+Deploy on netlify
+Change TENTs DNS setting to point to netlify site.
