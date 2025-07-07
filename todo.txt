@@ -7,3 +7,5 @@ Check all downloads
 Check all uploads
 Deploy on netlify
 Change TENTs DNS setting to point to netlify site.
+Create CheatSheet for other to amend site
+
