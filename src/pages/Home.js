@@ -172,7 +172,7 @@ const Home = () => {
         <TextAndNewsDiv>
           <TextDiv>
             <TextContainer>
-              We are a small charity that has provided canal trips for
+              We are a small, friendly charity that has provided canal trips for
               the people of the West Midlands and beyond for over 50 years. We
               are run entirely by volunteers whose only aim is to give you a
               very enjoyable and memorable day out.
