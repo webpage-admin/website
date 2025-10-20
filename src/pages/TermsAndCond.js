@@ -17,7 +17,7 @@ const TermsAndCond = () => {
 
   return (
     <Container style={{ paddingBottom: "100px" }}>
-      <Header>Terms and Conditions 2026</Header>
+      <Header>Enterprise Narrowboat Booking Conditions 2026</Header>
 
       <List>
         <li>
