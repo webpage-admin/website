@@ -69,10 +69,10 @@ export const BookYourTrip = () => {
         <Header>Book Your Trip</Header>
         <TextContainer>
           <ContentContainer>
-            <SectionTitle>2025 Bookings</SectionTitle>
+            <SectionTitle>2026 Bookings</SectionTitle>
             <StyledList>
-              <li>Bookings open from 24th February</li>
-              <li>Trips are available from 14th April to 31st October 2024</li>
+              <li>Bookings open from 16th February 2026</li>
+              <li>Trips are available from 13th April to 31st October 2026</li>
               <li>Trips usually start at 10.30am</li>
             </StyledList>
 
