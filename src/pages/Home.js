@@ -193,15 +193,15 @@ const Home = () => {
               Starting from Hatherton Marina, Queens Road, Calf Heath near
               Cannock (WV10 7DT), we offer fully accessible day trips on
               narrowboat ‘Enterprise’ travelling along the Staffs &amp; Worcs
-              canal to either Autherley Junction or Coven. For those who are
+              canal to either Autherley Junction, Coven or Penkridge. For those who are
               able-bodied, energetic and perhaps a bit more adventurous, a
-              longer trip to Penkridge can be provided. We call this the
+              longer trip to Penkridge can be provided for passengers who wish to participate. We call this the
               Have-a-go trip in which you can learn how to steer and operate 12
               locks..
             </TextContainer>
             <TextContainer>
               Equipped with a lift and accessible toilet, we can take up to 12
-              passengers (including 2 leaders). These can include 2 wheelchair
+              passengers (including a minimum of 2 leaders). These can include 2 wheelchair
               users as well as passengers with walkers &amp; frames. With full
               use of our kitchen facilities, feel free to make your own tea,
               coffee, hot chocolate (coffee, tea, hot chocolate, sugar, milk,
