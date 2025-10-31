@@ -93,7 +93,7 @@ export const BookYourTrip = () => {
             <br />
             <p>
               Jenny:{" "}
-              <StyledLink href="tel:07895053090">07895 053090</StyledLink>
+              <StyledLink href="tel:07908 084744">07908 084744</StyledLink>
               <br />
               Or Mariel:{" "}
               <StyledLink href="mailto:enterprise@truman-enterprise.org.uk">
