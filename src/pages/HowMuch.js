@@ -56,7 +56,7 @@ const HowMuch = () => {
           <tbody>
             <tr>
               <td>To Coven and back with pub meal at the Anchor at Coven</td>
-              <td>5 Hours</td>
+              <td>5 1/2 Hours</td>
               <td>£{priceData.trip1}</td>
             </tr>
             <tr>
@@ -64,7 +64,7 @@ const HowMuch = () => {
                 To Coven and back with fish & chips delivered to the boat at
                 Coven
               </td>
-              <td>5 Hours</td>
+              <td>6 Hours</td>
               <td>£{priceData.trip2}</td>
             </tr>
             <tr>
@@ -86,12 +86,17 @@ const HowMuch = () => {
               <td>£{priceData.trip5}</td>
             </tr>
             <tr>
+              <td>To Penkridge & backgoing through 6 locks(own food or order take-away food from Cross Keys pub</td>
+              <td>8 Hours</td>
+              <td>£{priceData.trip6}</td>
+            </tr>
+            <tr>
               <td>
                 Have A Go Days, To Penkridge and back 8 hours of Boat Bootcamp
                 with locks!
               </td>
               <td>8 Hours</td>
-              <td>£{priceData.trip6}</td>
+              <td>£{priceData.trip7}</td>
             </tr>
           </tbody>
         </table>
