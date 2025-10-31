@@ -53,13 +53,11 @@ const Home = () => {
       </TextContainer>
 
       <TextContainer>
-        Details and booking forms can be obtained from Christopher Rogers
-        <a href="mailto:chairman@truman-enterprise.org.uk?body=My custom mail body">
-          chairman@truman-enterprise.org.uk
-        </a>
+        Details and booking forms can be obtained from Jenny or Mariel.
+       
         <br />
-        <div>Phone- 01922 479926</div>
-        <div>mobile- 07763 214524</div>
+        <div>Jenny - 07908 084744</div>
+        <div>Mariel -info@truman-enterprise.org.uk</div>
       </TextContainer>
 
       <TextContainer>
