@@ -223,9 +223,8 @@ export const BookYourTrip = () => {
                 The Trust cannot accept any responsibility for passengers when
                 they are off the boat
               </li>
-              <li>
-              
-              </li>
+                    
+                  
             </StyledList>
             <p>
               It is very important that we monitor any risks that may be present
