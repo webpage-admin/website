@@ -28,14 +28,14 @@ const Home = () => {
       <hr style={{ width: "90vw" }} />
       <TextContainer>
         Starting from Hatherton Marina (Near Cannock), we also offer "Have A Go"
-        days where we offer a group of up to 12 people a "Bootcamp" course in
-        working a narrowboat. Supervised by a trained NCBA skipper and 2 NCBA
-        trained crew members, everyone on board will be offered the chance to
+        days where we offer a maximum of 8 able-bodied people a course in
+        working a narrowboat. Supervised by 2 trained NCBA skippers and a NCBA
+        trained crew member, everyone on board will be offered the chance to
         steer the boat.
       </TextContainer>
 
       <TextContainer>
-        A return trip to Penkridge involves around 6 hours on the boat and goes
+        A return trip to Penkridge involves around 8 hours on the boat and goes
         through 6 locks where everyone is encouraged to get off the boat and
         practice the safe use of the system. Upon arrival at Penkridge the boat
         needs to be turned around and will then be moored up with a hands on
@@ -44,12 +44,12 @@ const Home = () => {
       </TextContainer>
 
       <TextContainer>
-        A full day of learning how to steer, wind, moor the boat and how to
+        A full day of learning how to steer, turn, moor the boat and how to
         safely operate locks. Everyone is offered the chance to steer the boat
         under the supervision of the skipper. Tea, Coffee and soft refreshments
         will be available free of charge, however you will need to bring a
-        packed lunch. Due to time restrictions we are unable to stop at the pub
-        for food.
+        packed lunch, or order take-away food from the Cross Keys pub.
+      
       </TextContainer>
 
       <TextContainer>
