@@ -230,7 +230,7 @@ export const BookYourTrip = () => {
               It is very important that we monitor any risks that may be present
               so we can put measures in place to control these risks. You can
               download the latest risk assessment on the link below (must be
-              2025 version)
+              2026 version)
             </p>
           </ContentContainer>
         </TextContainer>
