@@ -54,9 +54,9 @@ const Home = () => {
 
       <TextContainer>
         Details and booking forms can be obtained from Jenny or Mariel.
-       
-        <br />
-          
+      </TextContainer> 
+                
+      <TextContainer> 
         <div>Jenny - 07908 084744</div>
         <div>Mariel -Enterprise@truman-enterprise.org.uk</div>
       </TextContainer>
