@@ -71,7 +71,7 @@ export const BookYourTrip = () => {
           <ContentContainer>
             <SectionTitle>2026 Bookings</SectionTitle>
             <StyledList>
-              <li>Bookings open from 16th February 2026</li>
+              <li>Bookings are now open</li>
               <li>Trips are available from 13th April to 31st October 2026</li>
               <li>Trips usually start at 10.30am</li>
             </StyledList>
@@ -121,7 +121,7 @@ export const BookYourTrip = () => {
                 burners
               </li>
               <li>
-                Bringing your own food is the only option on Have-a-go trips to
+                Bringing your own food or pre-ordered take-away food from the Cross Keys pub are the only option on Have-a-go trips to
                 Penkridge
               </li>
             </StyledList>
@@ -148,8 +148,7 @@ export const BookYourTrip = () => {
 
             <SectionTitle>Where trips start</SectionTitle>
             <p>
-              Trips to Coven and Autherley usually start at 10.30am. Have-a-go
-              trips usually start at 9.00am.
+              Trips to Coven and Autherley usually start at 10.30am.Trips to Penkridge start at 9.30am.
             </p>
             <p>All trips start from:</p>
             <p>
@@ -225,8 +224,7 @@ export const BookYourTrip = () => {
                 they are off the boat
               </li>
               <li>
-                Risk assessments are available to any group leader or
-                organisation. They are updated every year so they remain valid.
+              
               </li>
             </StyledList>
             <p>
