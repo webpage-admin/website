@@ -57,8 +57,8 @@ const Home = () => {
       </TextContainer> 
                 
       <TextContainer> 
-        <div>Jenny - 07908 084744</div>
-        <div>Mariel -Enterprise@truman-enterprise.org.uk</div>
+        <div>Jenny - 07895 053090</div>
+        <div>Mariel - enterprise@truman-enterprise.org.uk</div>
       </TextContainer>
 
       <TextContainer>
