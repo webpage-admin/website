@@ -41,7 +41,8 @@ const AvailabilityCalendar = () => {
 
   const isMonthOutOfRange = (date) => {
     const month = date.getMonth();
-    return month < 3 || month > 9; // January is 0, December is 11
+    //return month < 3 || month > 9; // January is 0, December is 11
+    return false;
   };
 
   useEffect(() => {
