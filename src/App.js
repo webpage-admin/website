@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import { BookYourTrip } from "./pages/BookYourTrip";
 import HowToPay from './pages/HowToPay'
-import HaveAGoDays from "./pages/HaveAGoDays"
+import SupportTheTrust from "./pages/SupportTheTrust"
 import ContactUs from './pages/ContactUs';
 import Gallery from './pages/Gallery';
 import CreateBooking from './pages/CreateBooking';
@@ -46,7 +46,7 @@ function App() {
         <Route path="/TrainingCourses"  element={<TrainingCourses />} />
         <Route path="/TheEnterprise"  element={<TheEnterprise />} />
         <Route path="/HowToPay"  element={<HowToPay />} />
-        <Route path="/HaveAGoDays"  element={<HaveAGoDays />} />
+        <Route path="/SupportTheTrust"  element={<SupportTheTrust />} />
         <Route path="/TermsAndCond"  element={<TermsAndCond />} />
         <Route path="/RiskAssesments"  element={<RiskAssesments />} />
         <Route path="/Volunteers"  element={<Volunteers />} />

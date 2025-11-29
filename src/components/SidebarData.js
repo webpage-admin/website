@@ -139,8 +139,8 @@ export const SidebarData = [
         followLink: true,
       },
       {
-        title: "Have a go trips",
-        path: "/HaveAGoDays",
+        title: "Support The Trust",
+        path: "/SupportTheTrust",
         cName: "sub-nav",
         closeMenu: true,
         followLink: true,
@@ -165,9 +165,9 @@ export const SidebarData = [
   },
   {
     index: 4,
-    title: "Have a go trips",
+    title: "Support The Trust",
     icon: <DirectionsBoatIcon style={{fontSize: 'medium'}} />,
-    path: "/HaveAGoDays",
+    path: "/SupportTheTrust",
     cName: "sub-nav",
     closeMenu: true,
     followLink: true,
