@@ -43,16 +43,39 @@ const TextDiv = styled.div`
 
 const NewsDiv = styled.div`
   width: 40vw;
-  height: 60vh;
-  overflow: hidden;
+  max-height: 80vh;
+  overflow-y: auto;
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   position: relative;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
 
   @media (max-width: 768px) {
     width: 100vw;
+    max-height: 60vh;
+  }
+
+  /* Scrollbar styling */
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
   }
 `;
 
@@ -62,6 +85,7 @@ const NewsTitleDiv = styled.div`
   font-size: 1.3em;
   text-align: center;
   overflow: wrap;
+  font-weight: bold;
 `;
 
 const NewsContentDiv = styled.div`
@@ -70,7 +94,7 @@ const NewsContentDiv = styled.div`
   text-align: left;
   font-size: 0.9em;
   overflow: wrap;
-  box-sizing: border-box; // Include padding in the width calculation
+  box-sizing: border-box;
 
   @media (max-width: 768px) {
     width: 90vw;
@@ -80,8 +104,7 @@ const NewsContentDiv = styled.div`
 const NewsImageDiv = styled.div`
   width: 100%;
   padding: 10px;
-
-  box-sizing: border-box; // Include padding in the width calculation
+  box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -94,51 +117,92 @@ const NewsImage = styled.img`
   object-fit: contain;
   box-sizing: border-box;
   padding: 0;
+  border-radius: 5px;
 `;
 
 const StickyHeader = styled.div`
   position: sticky;
   top: 0;
   z-index: 5;
-  background-color: #eaf3e7;
+  background-color: #2c5f2d;
+  color: white;
   width: 100%;
   text-align: center;
   font-size: 1.5em;
-  padding: 10px 0;
+  padding: 15px 0;
+  font-weight: bold;
+`;
+
+const NewsItemWrapper = styled.div`
+  width: 100%;
+  padding: 15px;
+  border-bottom: 2px solid #ddd;
+  box-sizing: border-box;
+  background-color: white;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #f0f0f0;
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
+`;
+
+const NewsDate = styled.p`
+  padding-left: 10px;
+  box-sizing: border-box;
+  color: #666;
+  font-size: 0.9em;
+  font-style: italic;
+`;
+
+const ClickToViewMore = styled.div`
+  text-align: center;
+  padding: 10px;
+  color: #2c5f2d;
+  font-weight: bold;
+  font-size: 1em;
+  text-decoration: underline;
+  cursor: pointer;
+
+  &:hover {
+    color: #1a3d1f;
+  }
 `;
 
 const Home = () => {
   const [news, setNews] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   // Function to convert file system path to web URL path
   function toWebPath(internalPath) {
     if (!internalPath) return "";
-    // Assuming your internal path starts with /var/www
     return internalPath.replace("/var/www", "");
   }
 
   useEffect(() => {
+    setLoading(true);
     axios
-      .get("https://adejord.co.uk/getLatestNews") // Adjust URL as necessary
+      .get("https://adejord.co.uk/getLatestNews") // Changed to fetch ALL news
       .then((response) => {
-        console.log("API Response:", response.data); // Log the API response data
-        setNews(response.data); // Set the newsItems state to the fetched data
+        console.log("API Response:", response.data);
+        setNews(response.data);
+        setLoading(false);
       })
       .catch((error) => {
         console.error("Error fetching news items:", error.message);
         if (error.response) {
-          // The request was made and the server responded with a status code
-          // that falls out of the range of 2xx
           console.error("Error status", error.response.status);
           console.error("Error data", error.response.data);
         } else if (error.request) {
-          // The request was made but no response was received
           console.error("Error request", error.request);
         } else {
-          // Something happened in setting up the request that triggered an Error
           console.error("Error", error.message);
         }
         console.error(error.config);
+        setLoading(false);
       });
   }, []);
 
@@ -149,10 +213,10 @@ const Home = () => {
           <img
             src={NiceBoatPic}
             style={{
-              maxWidth: "80%", // Ensures the image scales down if it's too wide
-              height: "auto", // Maintains the aspect ratio of the image
+              maxWidth: "80%",
+              height: "auto",
               display: "block",
-              borderRadius: "5px", // Ensures the image is treated as a block-level element to take effect of centering
+              borderRadius: "5px",
             }}
             alt="Nice Boat Pic"
           />
@@ -192,7 +256,7 @@ const Home = () => {
             <TextContainer>
               Starting from Hatherton Marina, Queens Road, Calf Heath near
               Cannock (WV10 7DT), we offer fully accessible day trips on
-              narrowboat ‘Enterprise’ travelling along the Staffs &amp; Worcs
+              narrowboat 'Enterprise' travelling along the Staffs &amp; Worcs
               canal to either Autherley Junction, Coven or Penkridge. For those who are
               able-bodied, energetic and perhaps a bit more adventurous, a
               longer trip to Penkridge can be provided for passengers who wish to participate. We call this the
@@ -213,34 +277,27 @@ const Home = () => {
           <hr />
 
           <NewsDiv>
-            <Link
-              to="/News"
-              style={{
-                // display: "block",
-                width: "100%",
-                height: "auto",
-                textDecoration: "none",
-                color: "inherit",
-              }}
-            >
-              <div style={{ textAlign: "center", width: "100%" }}>
-                {" "}
-                {/* Ensuring content is centered */}
-                <StickyHeader>Latest News</StickyHeader>
-                {news.length === 0 ? (
-                  <NewsContentDiv>
-                    <h2>Server Issue</h2>
-                    <p>
-                      There is currently an issue with the server. This is
-                      outside of our control.
-                    </p>
-                    <p>Please check again later</p>
-                  </NewsContentDiv>
-                ) : (
-                  news.map((item) => (
-                    <div key={item.id}>
-                      <NewsTitleDiv>{item.title}</NewsTitleDiv>
-                      <NewsContentDiv>{item.content}</NewsContentDiv>
+            <StickyHeader>Latest News</StickyHeader>
+            {loading ? (
+              <NewsContentDiv>
+                <p>Loading news...</p>
+              </NewsContentDiv>
+            ) : news.length === 0 ? (
+              <NewsContentDiv>
+                <h2>Server Issue</h2>
+                <p>
+                  There is currently an issue with the server. This is
+                  outside of our control.
+                </p>
+                <p>Please check again later</p>
+              </NewsContentDiv>
+            ) : (
+              <>
+                {news.map((item) => (
+                  <NewsItemWrapper key={item.id}>
+                    <NewsTitleDiv>{item.title}</NewsTitleDiv>
+                    <NewsContentDiv>{item.content}</NewsContentDiv>
+                    {item.image_path && (
                       <NewsImageDiv>
                         <NewsImage
                           src={`https://adejord.co.uk${toWebPath(
@@ -248,20 +305,29 @@ const Home = () => {
                           )}`}
                           alt={item.title}
                         />
-                        <br />
                       </NewsImageDiv>
-                      <p
-                        style={{ paddingLeft: "10px", boxSizing: "border-box" }}
-                      >
-                        {new Date(item.date).toLocaleDateString("en-GB", {
-                          timeZone: "Europe/London",
-                        })}
-                      </p>
-                    </div>
-                  ))
-                )}
-              </div>
-            </Link>
+                    )}
+                    <NewsDate>
+                      {new Date(item.date).toLocaleDateString("en-GB", {
+                        timeZone: "Europe/London",
+                      })}
+                    </NewsDate>
+                  </NewsItemWrapper>
+                ))}
+                <Link
+                  to="/News"
+                  style={{
+                    width: "100%",
+                    textDecoration: "none",
+                    color: "inherit",
+                  }}
+                >
+                  <ClickToViewMore>
+                    Click here to view all news on dedicated page →
+                  </ClickToViewMore>
+                </Link>
+              </>
+            )}
           </NewsDiv>
         </TextAndNewsDiv>
 

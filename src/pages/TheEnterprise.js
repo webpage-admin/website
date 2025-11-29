@@ -245,16 +245,12 @@ const TheEnterprise = () => {
         </ul>
 
         <p>
-          We operate trips from Hatherton Marina to Coven for a fish & chip
-          lunch or a meal at the Anchor pub, Coven. Alternatively you can bring
-          your own food for lunch. A longer trip with a short stop will take you
-          to Autherley Junction, but a pub meal is not available on this trip.
-        </p>
-
-        <p>
-          We aim to provide affordable day trips on the canals for community
-          groups and families with members who are elderly, disabled, have
-          special needs or health issues.
+          We operate trips from Hatherton Marina to Coven, for a fish and chip
+          lunch or a meal at the Anchor pub. A longer trip will take you to
+          Autherley Junction, but no pub meal is available. Alternatively, you
+          may wish to bring your own food on either trip. We also offer an
+          8-hour trip to Penkridge, with the option of bringing your own food,
+          or pre-ordering take- away food from the Cross Keys pub.F
         </p>
 
         <AddressSection>

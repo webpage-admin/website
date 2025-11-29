@@ -14,7 +14,8 @@ flex-direction: row;
 height: auto;
 width: 100%;
 padding-top: 10px;
-align-items: center;
+padding-bottom: 20px;
+align-items: flex-start;
 justify-content: center;
 
 
@@ -26,10 +27,14 @@ justify-content: center;
 const TextDiv = styled.div`
   margin: 10px;
   width: 100%;
-  height: 80vh;
+  height: auto;
+  min-height: 80vh;
   font-size: 1.2vw;
+  overflow-y: auto;
+  
   @media (max-width: 802px) {
     height: auto;
+    font-size: 14px;
   }
 `;
 
